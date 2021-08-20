@@ -1,11 +1,11 @@
 package com.example.simpleapp.api
 
 import com.example.simpleapp.model.Movie
-import retrofit2.Response
+import rx.Observable
 import javax.inject.Inject
 
 class ApiHelperImpl @Inject constructor(private val apiService: ApiService) : ApiHelper {
 
-    override fun getMovies(): Response<List<Movie>> = apiService.getMovies()
+    override fun getMovies(): Observable<List<Movie>> = apiService.getMovies()
 
 }

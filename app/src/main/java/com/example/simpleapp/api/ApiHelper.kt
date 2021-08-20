@@ -1,10 +1,10 @@
 package com.example.simpleapp.api
 
 import com.example.simpleapp.model.Movie
-import retrofit2.Response
+import rx.Observable
 
 interface ApiHelper {
 
-    fun getMovies(): Response<List<Movie>>
+    fun getMovies(): Observable<List<Movie>>
 
 }
