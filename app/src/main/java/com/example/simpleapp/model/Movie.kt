@@ -10,5 +10,6 @@ data class Movie(
     @Json(name = "type")
     val type: String = "",
     @Json(name = "url")
-    val url: String = ""
+    val url: String = "",
+    var isDownloaded: Boolean = false
 )

@@ -22,7 +22,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <ImageView
             android:id="@+id/img"
             backGroundColor="@{vmItem.color}"
@@ -30,13 +29,11 @@
             android:layout_height="match_parent"
             />
 
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/alphBlue"
+            android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,24 +42,35 @@
             android:text="@{vmItem.name}"
             />
 
-        <androidx.cardview.widget.CardView
-            app:cardBackgroundColor="@color/green"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:cardCornerRadius="30dp"
-            android:layout_margin="5dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewSelected"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_border"
             >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_arrow_down"
-                />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/downloadBtn"
+                app:cardBackgroundColor="@color/green"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="30dp"
+                android:layout_margin="15dp"
+                >
 
-        </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    downloaded="@{vmItem.isDownloaded}"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
