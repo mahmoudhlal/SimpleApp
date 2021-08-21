@@ -12,7 +12,7 @@ fun getRandomColor() : GradientDrawable{
     val blue: Int = r.nextInt(255 - 0 + 1) + 0
 
     val draw = GradientDrawable()
-    draw.shape = GradientDrawable.OVAL
+    draw.shape = GradientDrawable.RECTANGLE
     draw.setColor(Color.rgb(red, green, blue))
     return draw
 }

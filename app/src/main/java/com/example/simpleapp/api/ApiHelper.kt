@@ -1,7 +1,7 @@
 package com.example.simpleapp.api
 
 import com.example.simpleapp.model.Movie
-import rx.Observable
+import io.reactivex.Observable
 
 interface ApiHelper {
 

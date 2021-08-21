@@ -4,10 +4,9 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import com.example.simpleapp.di.ApplicationContext
 import javax.inject.Inject
 
-class NetworkHelper @Inject constructor(@ApplicationContext private val context: Context) {
+class NetworkHelper @Inject constructor(private val context: Context) {
 
     fun isNetworkConnected(): Boolean {
         var result = false
