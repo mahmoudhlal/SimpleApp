@@ -16,7 +16,7 @@ class MainItemViewModel(movie: Movie) : ViewModel() {
     init {
         name.value = movie.name
         isDownloaded.value = movie.isDownloaded
-        color.value = getRandomColor()
+        //color.value = getRandomColor()
     }
 
 

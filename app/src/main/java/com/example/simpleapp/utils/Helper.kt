@@ -2,6 +2,7 @@ package com.example.simpleapp.utils
 
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
+import android.os.Handler
 import java.util.*
 
 
@@ -15,4 +16,11 @@ fun getRandomColor() : GradientDrawable{
     draw.shape = GradientDrawable.RECTANGLE
     draw.setColor(Color.rgb(red, green, blue))
     return draw
+}
+
+
+fun doDelay(func: () -> Any, duration: Long) {
+    Handler().postDelayed({
+        func()
+    }, duration)
 }

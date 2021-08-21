@@ -11,5 +11,6 @@ data class Movie(
     val type: String = "",
     @Json(name = "url")
     val url: String = "",
-    var isDownloaded: Boolean = false
+    var isDownloaded: Boolean = false,
+    var startDownloaded: Int = 0
 )
